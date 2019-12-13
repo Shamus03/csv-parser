@@ -77,11 +77,12 @@ function parse(str, opts) {
   function fail(message, description) {
     const start = Math.max(0, i-5)
     throw new Error(`${message}:
-at: ${str.slice(start, start+6)}
-         ^ ${description}`)
+  at: ${str.slice(start, start+10)}
+           ^ ${description}`)
   }
   return parseCsv()
 }
 
-exports.default = parse
-exports.parse = parse
+module.exports = parse
+module.exports.parse = parse
+module.exports.default = parse

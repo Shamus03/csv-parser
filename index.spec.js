@@ -1,4 +1,4 @@
-parse = require('./index.js')
+const parse = require('./index.js')
 
 describe('parse', () => {
   it('Handles basic test data', () => {
@@ -81,7 +81,7 @@ g,h,i`
 
   it('Throws an error on extra values after quoted field', () => {
     const str = `a,b,c
-here's a,"bad"value
+here's a,"bad"value,is,bad
 g,h,i`
     expect(() => parse(str)).toThrow(/^expected separator/)
   })
