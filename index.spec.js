@@ -5,7 +5,7 @@ describe('parse', () => {
     const str = `a,b,c
 d,e
 f,g,h,i`
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([
       ['a', 'b', 'c'],
       ['d', 'e'],
@@ -17,7 +17,7 @@ f,g,h,i`
     const str = `a\tb\tc
 d\te
 f\tg\th\ti`
-  const parsed = parse(str, { separator: '\t' })
+    const parsed = parse(str, { separator: '\t' })
     expect(parsed).toEqual([
       ['a', 'b', 'c'],
       ['d', 'e'],
@@ -27,13 +27,13 @@ f\tg\th\ti`
 
   it('Handles empty string', () => {
     const str = ``
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([[]])
   })
 
   it('Handles empty values', () => {
     const str = `a,b,,c`
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([
       ['a', 'b', '', 'c']
     ])
@@ -41,7 +41,7 @@ f\tg\th\ti`
 
   it('Handles quoted values', () => {
     const str = `a,"b",c`
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([
       ['a', 'b', 'c'],
     ])
@@ -49,7 +49,7 @@ f\tg\th\ti`
 
   it('Handles separators within quoted values', () => {
     const str = `a,"b,c",d`
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([
       ['a', 'b,c', 'd'],
     ])
@@ -58,7 +58,7 @@ f\tg\th\ti`
   it('Handles newlines within a quoted value', () => {
     const str = `a,"b
 c",d`
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([
       ['a', 'b\nc', 'd'],
     ])
@@ -66,7 +66,7 @@ c",d`
 
   it('Handles double-quotes within quotes', () => {
     const str = `a,"b "" c",d`
-  const parsed = parse(str)
+    const parsed = parse(str)
     expect(parsed).toEqual([
       ['a', 'b " c', 'd'],
     ])
