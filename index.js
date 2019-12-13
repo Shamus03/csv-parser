@@ -83,5 +83,5 @@ at: ${str.slice(start, start+6)}
   return parseCsv()
 }
 
-module.exports = parse
-module.exports.parse = parse
+exports.default = parse
+exports.parse = parse
