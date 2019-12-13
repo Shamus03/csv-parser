@@ -84,3 +84,4 @@ at: ${str.slice(start, start+6)}
 }
 
 module.exports = parse
+module.exports.parse = parse

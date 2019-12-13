@@ -1,5 +1,10 @@
 export interface Options {
   separator?: string
 }
-export default function parse(str: string): string[][];
-export default function parse(str: string, opts: Options): string[][];
+function parse(str: string): string[][];
+function parse(str: string, opts: Options): string[][];
+
+export default parse
+export {
+  parse
+}
