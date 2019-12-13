@@ -1,7 +1,7 @@
 {
   "name": "@shamus03/csv-parser",
   "version": "1.0.2",
-  "description": "CSV parser",
+  "description": "A basic, zero-dependency CSV parser",
   "keywords": ["csv", "tsv", "parser"],
   "repository": {
     "type" : "git",
