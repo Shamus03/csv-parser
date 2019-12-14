@@ -1,10 +1,13 @@
 language: node_js
+os: linux
 node_js:
   - lts/*
 deploy:
-  skip_cleanup: true
-  script:
-    - npx semantic-release
+  provider: script
+  cleanup: false
+  on:
+    branch: master
+  script: npx semantic-release
 notifications:
   email:
     on_failure: always
