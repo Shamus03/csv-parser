@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "semantic-release": "^15.13.31"
   }
 }

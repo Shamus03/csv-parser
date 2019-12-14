@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - lts/*
+deploy:
+  skip_cleanup: true
+  script:
+    - npx semantic-release
 notifications:
   email:
     on_failure: always
