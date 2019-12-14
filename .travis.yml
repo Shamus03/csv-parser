@@ -4,7 +4,7 @@ node_js:
   - lts/*
 deploy:
   provider: script
-  cleanup: false
+  skip_cleanup: true
   on:
     branch: master
   script: npx semantic-release
