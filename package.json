@@ -3,10 +3,14 @@
   "version": "1.3.5",
   "types": "index.d.ts",
   "description": "A basic, zero-dependency CSV parser",
-  "keywords": ["csv", "tsv", "parser"],
+  "keywords": [
+    "csv",
+    "tsv",
+    "parser"
+  ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Shamus03/csv-parser.git"
+    "type": "git",
+    "url": "https://github.com/Shamus03/csv-parser.git"
   },
   "main": "index.js",
   "scripts": {
