@@ -21,6 +21,6 @@
   "dependencies": {},
   "devDependencies": {
     "jest": "^24.9.0",
-    "semantic-release": "^15.13.31"
+    "semantic-release": "^17.2.3"
   }
 }
