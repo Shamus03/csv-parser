@@ -85,4 +85,18 @@ here's a,"bad"value,is,bad
 g,h,i`
     expect(() => parse(str)).toThrow(/^expected separator/)
   })
+
+  it('Optionally allows extra values after quoted field', () => {
+    const str = `a,b,c
+here's a,"bad"value,is,bad
+g,h,i`
+    const parsed = parse(str, {
+      allowExtraContentAfterQuotedValue: true,
+    })
+    expect(parsed).toEqual([
+      ['a', 'b', 'c'],
+      ["here's a", 'badvalue', 'is', 'bad'],
+      ['g', 'h', 'i'],
+    ])
+  })
 })

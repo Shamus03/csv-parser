@@ -26,6 +26,11 @@ function parse(str, opts) {
       let val = parseValue(true)
       if (val === undefined) {
         val = parseValue(false)
+      } else if (opts.allowExtraContentAfterQuotedValue) {
+        const val2 = parseValue(false)
+        if (val2) {
+          val += val2
+        }
       }
       if (val !== undefined) {
         line.push(val)
